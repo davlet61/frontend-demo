@@ -1,0 +1,14 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "extends": "tsconfig/react-library.json",
+  "include": ["**/*.ts", "**/*.tsx", "./src/**/*.tsx"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "lib": ["DOM", "DOM.Iterable", "ES2015"]
+  }
+}
