@@ -1,12 +1,12 @@
 {
-  "name": "notes",
+  "name": "skeleton",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "start": "cd dist && PORT=3000 npx serve",
+    "start": "cd dist && PORT=3001 npx serve",
     "dev:nohmr": "webpack serve --open --mode development",
     "dev": "webpack serve --mode development --live-reload --hot"
   },

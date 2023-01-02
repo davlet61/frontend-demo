@@ -38,15 +38,3 @@ export const useSelected = create<SelectedStore>((set) => ({
   selectedOpt: { value: 'Select ...' },
   setSelected: (opt) => set(() => ({ selectedOpt: opt })),
 }));
-
-// extra
-
-export interface Show {
-  show: boolean;
-  toggleShow: () => void;
-}
-
-export const useShow = create<Show>((set) => ({
-  show: false,
-  toggleShow: () => set((state) => ({ show: !state.show })),
-}));

@@ -12,7 +12,7 @@ const { dependencies: deps } = pkg;
 const config: webpack.Configuration = {
   entry: './src/index.ts',
   output: {
-    publicPath: 'http://localhost:3000/',
+    publicPath: 'http://localhost:3001/',
     path: path.resolve(__dirname, 'dist'),
   },
 
@@ -22,9 +22,9 @@ const config: webpack.Configuration = {
   },
 
   devServer: {
-    port: 3000,
-    historyApiFallback: true,
+    port: 3001,
     hot: true,
+    historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
@@ -55,16 +55,13 @@ const config: webpack.Configuration = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'notes',
+      name: 'skeleton',
       filename: 'remoteEntry.js',
-      remotes: {
-        skeleton: 'skeleton@http://localhost:3001/remoteEntry.js',
-      },
+      remotes: {},
       exposes: {
-        // "./store": "./src/store",
+        './Navbar': './src/components/Navbar.tsx',
       },
       shared: {
-        // ...deps,
         react: {
           singleton: true,
           requiredVersion: deps.react,
@@ -80,9 +77,6 @@ const config: webpack.Configuration = {
         // ui: {
         //   singleton: true,
         //   requiredVersion: false,
-        // },
-        // zod: {
-        //   singleton: true,
         // },
       },
     }),
