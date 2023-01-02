@@ -1,0 +1,33 @@
+{
+  "name": "storybook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "start-storybook -p 6006 --no-open",
+    "build": "build-storybook"
+  },
+  "dependencies": {
+    "next": "13.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ui": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-vite": "^0.2.6",
+    "@storybook/cli": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.15",
+    "babel-loader": "^8.3.0",
+    "config": "*",
+    "storybook-dark-mode": "^2.0.4",
+    "tsconfig": "*",
+    "typescript": "4.9.4",
+    "vite": "^4.0.3"
+  }
+}

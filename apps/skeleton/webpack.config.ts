@@ -59,7 +59,7 @@ const config: webpack.Configuration = {
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './Navbar': './src/components/Navbar.tsx',
+        './modules': './src/components/index.ts',
       },
       shared: {
         react: {

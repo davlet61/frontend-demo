@@ -3,7 +3,13 @@ const brandColor = colors.blue;
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./index.html', '../../packages/ui/**/*.{ts,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    '../../packages/ui/**/*.{ts,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+    '../../apps/notes/**/*.{js,ts,jsx,tsx}',
+    '../../apps/skeleton/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {

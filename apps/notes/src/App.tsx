@@ -4,7 +4,7 @@ import { Button, Radio } from 'ui';
 
 import { Home, Modal } from './components';
 
-const Navbar = React.lazy(() => import('skeleton/Navbar'));
+const Navbar = React.lazy(() => import('skeleton/modules').then((mod) => ({ default: mod.Navbar })));
 
 const App = () => {
   const { toggleVisibility } = useVisibility((state) => state);
