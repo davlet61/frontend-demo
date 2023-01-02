@@ -8,7 +8,7 @@ module.exports = {
     '../../packages/ui/**/*.{ts,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
     '../../apps/notes/**/*.{js,ts,jsx,tsx}',
-    '../../apps/skeleton/**/*.{js,ts,jsx,tsx}',
+    '../../apps/modules/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {

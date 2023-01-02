@@ -5,7 +5,7 @@
     }
   },
   "extends": "tsconfig/react-library.json",
-  "include": ["**/*.ts", "**/*.tsx", "./src/**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "./src/**/*.tsx", "../modules/src/components/Modal.tsx"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "resolveJsonModule": true,

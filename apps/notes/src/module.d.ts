@@ -1,1 +1,1 @@
-declare module 'skeleton/*';
+declare module 'modules/*';

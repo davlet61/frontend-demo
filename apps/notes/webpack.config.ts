@@ -1,6 +1,7 @@
 import 'webpack-dev-server';
 
 import HtmlWebPackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import webpack from 'webpack';
@@ -24,8 +25,10 @@ const config: webpack.Configuration = {
 
   devServer: {
     port: 3000,
+    watchFiles: './src/**/*.{tsx, ts}',
     historyApiFallback: true,
     hot: true,
+
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
@@ -44,7 +47,12 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.(css|s[ac]ss)$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 2 } },
+          { loader: 'postcss-loader' },
+          // { loader: 'style-loader' },
+        ],
       },
       {
         test: /\.(ts|js)x?$/,
@@ -59,10 +67,10 @@ const config: webpack.Configuration = {
       name: 'notes',
       filename: 'remoteEntry.js',
       remotes: {
-        skeleton: 'skeleton@http://localhost:3001/remoteEntry.js',
+        modules: 'modules@http://localhost:3001/remoteEntry.js',
       },
       exposes: {
-        // "./store": "./src/store",
+        './Navbar': './src/components/Navbar.tsx',
       },
       shared: {
         // ...deps,
@@ -87,6 +95,7 @@ const config: webpack.Configuration = {
         // },
       },
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebPackPlugin({
       template: './public/index.html',
     }),

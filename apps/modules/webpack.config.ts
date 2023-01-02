@@ -1,6 +1,7 @@
 import 'webpack-dev-server';
 
 import HtmlWebPackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import * as path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import webpack from 'webpack';
@@ -16,7 +17,6 @@ const config: webpack.Configuration = {
     publicPath: 'http://localhost:3001/',
     path: path.resolve(__dirname, 'dist'),
   },
-
   resolve: {
     plugins: [new TsconfigPathsPlugin()],
     extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
@@ -25,6 +25,7 @@ const config: webpack.Configuration = {
   devServer: {
     port: 3001,
     hot: true,
+    watchFiles: './src/**/*.{tsx, ts}',
     historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
@@ -44,7 +45,12 @@ const config: webpack.Configuration = {
       },
       {
         test: /\.(css|s[ac]ss)$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { importLoaders: 2 } },
+          { loader: 'postcss-loader' },
+          // { loader: 'style-loader' },
+        ],
       },
       {
         test: /\.(ts|js)x?$/,
@@ -56,11 +62,13 @@ const config: webpack.Configuration = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: 'skeleton',
+      name: 'modules',
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        notes: 'notes@http://localhost:3000/remoteEntry.js',
+      },
       exposes: {
-        './modules': './src/components/index.ts',
+        './comps': './src/components/index.ts',
       },
       shared: {
         react: {
@@ -81,6 +89,7 @@ const config: webpack.Configuration = {
         // },
       },
     }),
+    new MiniCssExtractPlugin(),
     new HtmlWebPackPlugin({
       template: './public/index.html',
     }),

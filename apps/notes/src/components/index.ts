@@ -1,3 +1,4 @@
-export { Home } from './Home';
-export { default as Modal } from './Modal';
-export { NewNote } from './NewNote';
+export { default as Footer } from './Footer';
+export { default as Home } from './Home';
+export { default as Layout } from './Layout';
+export { default as Navbar } from './Navbar';

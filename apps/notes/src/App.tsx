@@ -1,20 +1,27 @@
 import React from 'react';
 import { Radio } from 'ui';
 
-import { Home, Modal } from './components';
+import { Footer, Home, Navbar } from './components';
 
-const Navbar = React.lazy(() => import('skeleton/modules').then((mod) => ({ default: mod.Navbar })));
+const Modal = React.lazy(() => import('modules/comps').then((mod) => ({ default: mod.Modal })));
 
 const App = () => {
   return (
-    <main className="">
-      <React.Suspense fallback="Loading..">
-        <Navbar />
-      </React.Suspense>
-      <Home />
-      <Modal />
-      <Radio label="Plans" />
-    </main>
+    <>
+      <header>
+        <React.Suspense fallback="Loading..">
+          <Navbar />
+        </React.Suspense>
+      </header>
+
+      <main className="">
+        <Home />
+        <Modal />
+        <Radio label="Plans" />
+      </main>
+
+      <Footer />
+    </>
   );
 };
 

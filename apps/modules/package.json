@@ -1,5 +1,5 @@
 {
-  "name": "skeleton",
+  "name": "modules",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -18,8 +18,8 @@
     "css-loader": "^6.7.3",
     "html-webpack-plugin": "^5.5.0",
     "postcss-loader": "^7.0.2",
-    "style-loader": "^3.3.1",
     "ts-loader": "^9.4.2",
+    "mini-css-extract-plugin": "^2.7.2",
     "ts-node": "^10.9.1",
     "tsconfig": "*",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
