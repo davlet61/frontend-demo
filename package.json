@@ -2,6 +2,8 @@
   "name": "frontend-demo",
   "version": "0.0.0",
   "private": true,
+  "license": "isc",
+  "homepage": "https://github.com/davlet61/frontend-demo#readme",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -22,7 +24,7 @@
     "turbo": "^1.6.3"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {},
   "packageManager": "yarn@1.22.19"

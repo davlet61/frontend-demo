@@ -1,6 +1,11 @@
-# Turborepo starter
+# Module Federation with React and Webpack
 
-This is an official Yarn v1 starter turborepo.
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/davlet61/frontend-demo/blob/main/LICENSE)
+
+This is a project scaffold to demonstrate microfrontend architechture with Module Federation and Monorepo.
+The project utilizes the power of Typescript
+
+[![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech%20Stack&fontSize=19&lineCount=3&theme=discord&line1=react,react,6dd6fa;typescript,typescript,3178C6;webpack,webpack,8DD6F9;&line2=tailwindcss,tailwindcss,06B6D4;storybook,storybook,FF4785;&line3=turborepo,turbborepo,EF4444;)](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech%20Stack&fontSize=19&lineCount=3&theme=discord&line1=react,react,6dd6fa;typescript,typescript,3178C6;webpack,webpack,8DD6F9;&line2=tailwindcss,tailwindcss,06B6D4;storybook,storybook,FF4785;&line3=turborepo,turbborepo,EF4444;)
 
 ## What's inside?
 
@@ -8,66 +13,38 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/) as a package manager. I
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `notes`: A React Federated application serving as a host-app.
+- `modules`: Another federated React app, can be considered a Micro Frontend.
+- `config`: Shared configuration files inlcuding `eslint`, `prettier`, `tailwindcss`.
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `lib`: Mainly a store package, `shared state`with `Zustand`.
+- `ui`: UI library and a design system built with `Tailwindcss`, `Headless UI` and React.
+- `storybook`: Not entirely finished.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Local Development
 
-### Utilities
+To develop all apps and packages, run the following command:
 
-This turborepo has some additional tools already setup for you:
+```
+git clone https://github.com/davlet61/frontend-demo.git
+cd frontend-demo
+yarn
+yarn dev
+```
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Notes will be available at `localhost:3000` and Modules at `localhost:3001`
 
 ### Build
 
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
-yarn run build
+cd frontend-demo
+yarn build
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
+_and to run it_:
 
 ```
-cd my-turborepo
-yarn run dev
+yarn start
 ```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
