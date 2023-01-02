@@ -1,18 +1,25 @@
 import create from 'zustand';
 
-export interface Movie {
+import { initialNotes } from './notes';
+
+export interface Note {
+  id: number;
   title: string;
-  image: string;
+  priority: 'high' | 'medium' | 'low';
+  text: string;
+  type: 'personal' | 'work' | 'school';
 }
 
 export interface StoreProps {
-  movies: Array<Movie>;
-  addMovie: (movie: Movie) => void;
+  notes: Array<Note>;
+  addNote: (note: Note) => void;
+  deleteNote: (id: number) => void;
 }
 
-export const useMovieStore = create<StoreProps>((set) => ({
-  movies: [],
-  addMovie: (movie) => set((state) => ({ movies: [...state.movies, movie] })),
+export const useNotesStore = create<StoreProps>((set, get) => ({
+  notes: initialNotes,
+  addNote: (note) => set((state) => ({ notes: [...state.notes, note] })),
+  deleteNote: (id) => set((state) => ({ notes: state.notes.filter((n) => n.id !== id) })),
 }));
 
 export interface VisibilityStoreProps {

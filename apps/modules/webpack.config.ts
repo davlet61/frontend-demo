@@ -49,7 +49,6 @@ const config: webpack.Configuration = {
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 2 } },
           { loader: 'postcss-loader' },
-          // { loader: 'style-loader' },
         ],
       },
       {

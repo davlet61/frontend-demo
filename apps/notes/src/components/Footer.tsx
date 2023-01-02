@@ -2,7 +2,7 @@ import { ButtonOrLink, Logo } from 'ui';
 
 const Footer = () => {
   return (
-    <footer className="absolute bottom-0 w-full rounded-lg bg-white p-4 shadow dark:bg-gray-900 md:px-6 md:py-8">
+    <footer className="w-full rounded-lg bg-white p-4 shadow dark:bg-gray-900 md:px-6 md:py-8">
       <div className="sm:flex sm:items-center sm:justify-between">
         <ButtonOrLink href="https://flowbite.com/" className="mb-4 flex items-center sm:mb-0">
           <Logo />

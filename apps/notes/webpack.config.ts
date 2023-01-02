@@ -51,7 +51,6 @@ const config: webpack.Configuration = {
           MiniCssExtractPlugin.loader,
           { loader: 'css-loader', options: { importLoaders: 2 } },
           { loader: 'postcss-loader' },
-          // { loader: 'style-loader' },
         ],
       },
       {
@@ -71,6 +70,7 @@ const config: webpack.Configuration = {
       },
       exposes: {
         './Navbar': './src/components/Navbar.tsx',
+        './Footer': './src/components/Footer.tsx',
       },
       shared: {
         // ...deps,

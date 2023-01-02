@@ -1,4 +1,5 @@
 import { useVisibility } from 'lib';
+import React from 'react';
 import { Button, ButtonOrLink, Logo } from 'ui';
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
             <ul className="mt-4 flex flex-col items-center rounded-lg border border-gray-100 bg-gray-50 p-2 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:text-sm md:font-medium md:dark:bg-gray-900">
               <li>
                 <ButtonOrLink
-                  href="/about"
+                  href="http://localhost:3000/about"
                   className="md:hover:text-brand-700 block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-white"
                 >
                   About
@@ -44,10 +45,10 @@ const Navbar = () => {
               </li>
               <li>
                 <ButtonOrLink
-                  href="#"
+                  href="http://localhost:3000/notes"
                   className="md:hover:text-brand-700 block rounded py-2 pl-3 pr-4 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:border-0 md:p-0 md:hover:bg-transparent md:dark:hover:bg-transparent md:dark:hover:text-white"
                 >
-                  Services
+                  Notes
                 </ButtonOrLink>
               </li>
               <li>
