@@ -9,5 +9,5 @@ module.exports = {
   arrowParens: 'always',
   importOrderSeparation: true,
   importOrder: ['^ui/(.*)$', '(.css)$', '<THIRD_PARTY_MODULES>', '^[./]'],
-  plugins: [require.resolve('@trivago/prettier-plugin-sort-imports'), require('prettier-plugin-tailwindcss')],
+  plugins: [require('prettier-plugin-tailwindcss')],
 };

@@ -1,8 +1,9 @@
+import 'webpack-dev-server';
+
 import HtmlWebPackPlugin from 'html-webpack-plugin';
 import * as path from 'path';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
-import * as webpack from 'webpack';
-import 'webpack-dev-server';
+import webpack from 'webpack';
 
 import pkg from './package.json';
 
