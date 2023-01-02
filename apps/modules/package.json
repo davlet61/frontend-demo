@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
-    "start": "cd dist && PORT=3001 npx serve",
+    "start": "webpack serve --mode production",
     "dev:nohmr": "webpack serve --open --mode development",
     "dev": "webpack serve --mode development --live-reload --hot"
   },

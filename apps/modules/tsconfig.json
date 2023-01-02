@@ -16,6 +16,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "lib": ["DOM", "DOM.Iterable", "ES2015"],
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "outDir": "dist"
   }
 }

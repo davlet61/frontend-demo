@@ -13,6 +13,7 @@ const { dependencies: deps } = pkg;
 
 const config: webpack.Configuration = {
   entry: './src/index.ts',
+  devtool: 'source-map',
   output: {
     publicPath: 'http://localhost:3000/',
     path: path.resolve(__dirname, 'dist'),
