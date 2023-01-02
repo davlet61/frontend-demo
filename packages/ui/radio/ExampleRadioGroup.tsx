@@ -41,19 +41,16 @@ const radioStyles = cva('relative flex cursor-pointer rounded-lg px-5 py-4 shado
 
 export interface RadioProps extends VariantProps<typeof radioStyles> {
   label: string;
-  // options: Array<Option>;
-  // selectedOpt: Option;
-  // setSelected: (opt: Option) => void;
 }
 
-export const Radio = ({ label }: RadioProps) => {
+export const ExampleRadioGroup = ({ label }: RadioProps) => {
   const [selected, setSelected] = useState(plans[0]);
 
   return (
     <div className="w-full px-4 py-16">
       <div className="mx-auto w-full max-w-md">
         <RadioGroup value={selected} onChange={setSelected}>
-          <RadioGroup.Label className="sr-only">{label}</RadioGroup.Label>
+          <RadioGroup.Label className="p-2 text-2xl font-bold">{label}</RadioGroup.Label>
           <div className="space-y-2">
             {plans.map((plan) => (
               <RadioGroup.Option

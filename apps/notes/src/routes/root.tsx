@@ -1,13 +1,13 @@
-import { Home, Layout } from 'components';
+import { Layout, Welcome } from 'components';
 import React from 'react';
-import { Radio } from 'ui';
+import { ExampleRadioGroup } from 'ui';
 
 const Root = () => {
   return (
     <Layout>
       <main className="h-full">
-        <Home />
-        <Radio label="Plans" />
+        <Welcome />
+        <ExampleRadioGroup label="Example Radio Group:" />
       </main>
     </Layout>
   );

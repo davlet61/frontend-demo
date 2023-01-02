@@ -1,6 +1,6 @@
 import { Button, Container, Link } from 'ui';
 
-const Home = () => (
+const Welcome = () => (
   <Container>
     <div className="space-y-6">
       <div className="text-center text-8xl font-bold italic">
@@ -22,4 +22,4 @@ const Home = () => (
   </Container>
 );
 
-export default Home;
+export default Welcome;

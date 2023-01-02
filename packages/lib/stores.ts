@@ -32,16 +32,14 @@ export const useVisibility = create<VisibilityStoreProps>((set) => ({
   toggleVisibility: () => set((state) => ({ visibility: !state.visibility })),
 }));
 
-interface Option {
-  value: string;
-}
+export type Option = Array<string>;
 
 export interface SelectedStore {
-  selectedOpt: Option;
-  setSelected: (option: Option) => void;
+  selectedOpt: Option[number];
+  setSelected: (option: Option[number]) => void;
 }
 
 export const useSelected = create<SelectedStore>((set) => ({
-  selectedOpt: { value: 'Select ...' },
+  selectedOpt: 'Select ...',
   setSelected: (opt) => set(() => ({ selectedOpt: opt })),
 }));
