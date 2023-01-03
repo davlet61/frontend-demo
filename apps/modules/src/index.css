@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-  height: calc(100% - 16rem);
+  height: calc(100% - 15rem);
 }
 
 form {

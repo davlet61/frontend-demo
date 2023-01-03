@@ -8,6 +8,9 @@ const App = () => {
     <>
       <Suspense fallback="Loading...">
         <Navbar />
+        <main className='flex p-8 text-8xl animate-pulse text-center text-brand-900 font-bold h-full items-center justify-center'>
+          Federated React App
+        </main>
       </Suspense>
       <Suspense fallback="Loading...">
         <Footer />
