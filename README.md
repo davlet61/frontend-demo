@@ -2,7 +2,10 @@
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://github.com/davlet61/frontend-demo/blob/main/LICENSE)
 
-This is a project scaffold to demonstrate microfrontend architechture with Module Federation and Monorepo.
+This is a project scaffold to demonstrate microfrontend architechture with Module Federation and Monorepo. 
+
+This is only a Client Side demonstration, however, SSR is also possible
+
 The project utilizes the power of Typescript
 
 [![My Tech Stack](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech%20Stack&fontSize=19&lineCount=3&theme=discord&line1=react,react,6dd6fa;typescript,typescript,3178C6;webpack,webpack,8DD6F9;&line2=tailwindcss,tailwindcss,06B6D4;storybook,storybook,FF4785;&line3=turborepo,turbborepo,EF4444;)](https://github-readme-tech-stack.vercel.app/api/cards?title=Tech%20Stack&fontSize=19&lineCount=3&theme=discord&line1=react,react,6dd6fa;typescript,typescript,3178C6;webpack,webpack,8DD6F9;&line2=tailwindcss,tailwindcss,06B6D4;storybook,storybook,FF4785;&line3=turborepo,turbborepo,EF4444;)
