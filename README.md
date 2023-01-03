@@ -33,6 +33,7 @@ yarn dev
 ```
 
 Notes will be available at `localhost:3000` and Modules at `localhost:3001`
+You can also access Stories at `localhost:6006`
 
 ### Build
 
